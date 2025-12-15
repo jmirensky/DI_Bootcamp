@@ -1,0 +1,8 @@
+print(type(42))
+print(type("42"))
+print(type(False))
+print(type(4.5))
+print(type("hello world"))
+print("hello".capitalize())
+print("hello".upper())
+print("hello".lower())
