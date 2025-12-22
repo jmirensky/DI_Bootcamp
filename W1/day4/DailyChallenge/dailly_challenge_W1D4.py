@@ -30,7 +30,7 @@ print (list_multiples)
 
 word = input("Enter a word: ")
 
-result = ""
+result = ""  #se actualiza a medida que avanzan las letras
 
 for char in word:
     if result == "" or char != result[-1]:
@@ -38,3 +38,13 @@ for char in word:
 
 print(result)
 
+#profe no lo supo resolver en clase, pero un compañero lo hizo asi y funciona.
+word_user = input("Enter a word2: ") 
+limpio = ""    #se actualiza a medida que avanzan las letras
+check = ""
+
+for letter in word_user:
+    if letter != check:
+        limpio += letter
+        check = letter
+print (limpio)

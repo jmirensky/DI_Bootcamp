@@ -7,7 +7,7 @@ phone_number = 532287514
 print(type(bank_balance))   #string
 print(type(phone_number))  #int
 
-bank_balance= int(bank_balance) #convert to int
+bank_balance = int(bank_balance) #convert to int
 print(type(bank_balance)) #verfication
 
 phone_number= str(phone_number)   #convert to str

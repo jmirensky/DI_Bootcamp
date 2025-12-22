@@ -7,5 +7,3 @@ print (phrase.replace ("are", "is"))
 print(phrase.split()[0])  #option1
 just_strings = phrase[0:7]   #option2
 print (just_strings)
-
-

@@ -5,7 +5,7 @@
 #Hello world
 #Hello world
 
-print ("hello world\n" * 4)
+print ("hello world\n" * 4)   # \n es un carácter especial que significa salto de línea (newline)
 
 
 #Exercise 2: Some Math
@@ -13,7 +13,7 @@ print ("hello world\n" * 4)
 # (99^3)*8 (meaning 99 to the power of 3, times 8).
 
 result = (99**3)*8
-print (result)
+print (result)   #7762392
 
 
 #Exercise 3: What is the output?
@@ -22,14 +22,14 @@ print (result)
 # 3 == 3  #True
 # 3 == "3"  #False
 # "3" > 3 #Error   (not possible > or < for string)
-# "Hello" == "hello"  #True --> is False, case sensitive
+# "Hello" == "hello"  #False, case sensitive
 
 #Verification
 print(5 < 3) #False
 print(3 == 3)  #True
 print(3 == "3")  #False
-print("3" > 3) #Error  --> '>' not supported between instances of 'str' and 'int'
-print("Hello" == "hello")  #True --> is False
+#print("3" > 3) #Error  --> '>' not supported between instances of 'str' and 'int'
+print("Hello" == "hello")  #False
 
 
 #Exercise 4: Your computer brand
@@ -68,7 +68,6 @@ a = 20
 b = 10
 if a > b:
     print("Hello World")
-
 print ('finished')
 
 
@@ -78,9 +77,9 @@ print ('finished')
 number = int(input ('Please, give an integer number: '))
 
 if number % 2 == 0:
-    print (f"Your number is {number}, and is even")
+    print (f"Your number is {number}, and is even")  #even = par
 else:
-    print (f"Your number is {number}, and is odd")
+    print (f"Your number is {number}, and is odd")  #odd = impar
 
 
 #Exercise 8: What’s your name?

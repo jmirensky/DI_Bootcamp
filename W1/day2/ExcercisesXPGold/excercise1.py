@@ -1,5 +1,4 @@
 #Print the following output in one line of code:
-
 #Hello world
 #Hello world
 #Hello world
@@ -10,3 +9,6 @@
 #I love python
 
 print ("hello world\n"*4 + "I love python\n"*4)
+
+#\n es new line
+# + une pero sin espacios

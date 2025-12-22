@@ -45,7 +45,7 @@ basket.remove('Blueberries')
 basket.append('Kiwi')
 
 #Add "Apples" to the beginning of the list.
-basket.insert (0, 'Apples')
+basket.insert (0, 'Apples')  #uso insert pq ya tengo Apples en la posicion 0
 
 #Count how many times "Apples" appear in the list.
 count_Apples = basket.count('Apples')
@@ -55,7 +55,7 @@ print(f'Count apples: {count_Apples}')
 basket.clear()
 
 #Print the final state of the list.
-print("final state: " , basket)
+print("final state: " , basket)   #[]
 
 
 #Exercise 4: Floats
@@ -64,7 +64,7 @@ print("final state: " , basket)
 #float: numbers with a decimal part → 1.5, 2.0, 4.75
 
 #Create a list containing the following sequence of mixed types: floats and integers:  1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5.
-#Avoid hard-coding each number manually. Think: Can you generate this sequence using a loop or another method?
+#Avoid hard-coding each number manually. Can you generate this sequence using a loop or another method?
 
 numbers = [i / 2 for i in range(3, 11)]
 print(numbers)
@@ -90,21 +90,21 @@ for index, value in enumerate(my_list):     #enumerate: index and value at the s
 #if the input is correct print “thank you” and break the loop
 
 while True: 
-
-    name = input ('Enter your name: ')
+    name = input('Enter your name: ').strip()  #strip quita espacios
     if name.isdigit() or len(name) <3:
         print("Invalid name. Try again.")
     else:
-        print(f"Thank you , {name}")
+        print(f"Thank you, {name}")
         break
 
 
 #Exercise 7: Favorite Fruits
 #Ask the user to input their favorite fruits (they can input several fruits, separated by spaces).
-fruits = input ('Enter your favorite fruits, separated by spaces: ')
+fruits = input('Enter your favorite fruits, separated by spaces: ')
 
 #Store these fruits in a list.
 list_fruits = fruits.split()   #convert string in list, using spaces as separator
+print (list_fruits)
 
 #Ask the user to input the name of any fruit.
 chosen_fruit = input("Enter the name of ANY fruit: ")
@@ -135,8 +135,7 @@ while True:
        break
     else:
         toppings.append(topping)
-        print(f"Adding {topping} to your pizza.")
-        print (topping)
+        print(f"Adding {topping} to your pizza.")        
 
 # Prices:
 base_price = 10
@@ -144,19 +143,23 @@ topping_price = 2.5
 total_price = base_price + topping_price * len(toppings)
 
 # Show toppings y total price
-print("\nYour pizza has the following toppings:")
+print("Your pizza has the following toppings:")
 for t in toppings:
     print(f"- {t}")
 
-print(f"Total cost: ${total_price:.2f}")  #.2f en f-string formatea el total a 2 decimales
+print(f"Total cost: ${total_price:.2f}") 
+#:.2f en f-string formatea el total a 2 decimales
+    # : → From here on, format
+    # .2 → 2 decimal places
+    # f → float ( decimal number)
 
 
 #Exercise 9: Cinemax Tickets  (Hard excercise for me)
 #Ask for the age of each person in a family who wants to buy a movie ticket.
 #Calculate the total cost based on the following rules:
-#Free for people under 3.
-#$10 for people aged 3 to 12.
-#$15 for anyone over 12.
+    #Free for people under 3.
+    #$10 for people aged 3 to 12.
+    #$15 for anyone over 12.
 #Print the total ticket cost.
 
 total_cost = 0
@@ -166,10 +169,10 @@ while True:
     age_input = input('Enter the age of the family\'s member: (done to finish) ')
     
     if age_input.lower() == 'done':
+        print ('Thank you, you can pay now')
         break
     
     age = int(age_input)
-
     if age < 3:
         cost = 0
     elif 3 <= age <= 12:
@@ -180,47 +183,35 @@ while True:
     total_cost += cost
     print(f"Total ticket cost: ${total_cost}")
 
-#Bonus: --> instructions are not clear for me, I think we must restrict to any person > 21 years.
-
+#Bonus: 
 #Imagine a group of teenagers wants to see a restricted movie (only for ages 16–21).
 #Write a program to:
 #Ask for each person’s age.
 #Remove anyone who isn’t allowed to watch.
 #Print the final list of attendees.
 
-#opcion 1 LO QUE PIDE EL EJERCICIO
-# Lista vacía para guardar asistentes permitidos
-#attendees = []
+#opcion 1 LO QUE PIDE EL EJERCICIO (exclusión de ages 16–21).
+# estrictamente lo aplicaría para mayores de 21 años, los niños no deberian ir.
 
-#while True:
-#    age_input = input("Enter the age of a teenager (or 'done' to finish): ")
+ages = []   # Lista vacía para guardar a todos los asistentes
+
+while True:
+    age = int(input("Enter your age (0 to finish): "))
     
-#    if age_input.lower() == 'done':
-#        break
+    if age == 0:
+        break
     
-#    age = int(age_input)
-    
-#    if 16 <= age <= 21:
-#        attendees.append(age)
-#    else:
-#        print(f"Age {age} is not allowed for this movie.")
+    ages.append(age)
 
-#print("\nFinal list of attendees allowed for the restricted movie:")
-#print(attendees)
+allowed = []  # Lista vacía para guardar a todos los permitidos
 
-#opcion2 LO QUE YO INTERPRETO
-# Lista para guardar todas las edades ingresadas
-#all_ages = []
+for age in ages:
+    if age < 16 or age >21:  #estrictamente lo aplicaría para mayores de 21 años, los niños no deberian ir.
+        allowed.append(age)
+    else:
+        print(f"Age {age} is not allowed for this movie.")
 
-# Pedimos edades
-#while True:
-#    age_input = input("Enter the age of a person (or 'done' to finish): ")
-#    if age_input.lower() == 'done':
-#        break
-#    all_ages.append(int(age_input))
+not_allowed = [item for item in ages if item not in allowed]
 
-# Excluir a toda perspna menor de 21
-#allowed_attendees = [age for age in all_ages if age > 21]
-
-#print("\nFinal list of attendees allowed for the restricted movie:")
-#print(allowed_attendees)
+print(f"Final list of attendees allowed: {allowed}")
+print(f"Final list of attendees NOT allowed: {not_allowed}")  #not required by the excercise
