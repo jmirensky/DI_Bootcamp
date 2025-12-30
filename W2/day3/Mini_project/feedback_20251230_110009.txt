@@ -1,0 +1,10 @@
+URL: https://github.com/jmirensky/DI_Bootcamp/blob/main/W2/day3/Mini_project/TicTacToe_game.py
+suggestions for improvement:
+- The game runs perfectly, is well-documented, and handles invalid user input effectively.
+- Consider adding a feature to allow players to choose their symbols (X or O) at the beginning of the game for added customization.
+Brief justification:
+- correctness: The code accurately implements all the steps outlined in the instructions, including representing the board, displaying it, getting player input with validation, checking for a winner, checking for a tie, and managing the main game loop. Each function performs its intended task correctly, and the overall game logic is sound, directly addressing the chapter content.
+- readability: The code is very readable. It has well-defined functions (display_board, player_input, check_win, check_tie, play) and the steps in the play function are also numbered in comments. This makes the code very easy to follow. The comments inline provide guidance.
+- performance: The performance is good; the game runs smoothly. Using a `while` loop for the main game loop and efficient checks for winning and tying conditions contribute to reasonable performance. The only area for potential improvement might be in very large-scale applications, but for this simple game, it is perfectly adequate.
+- security: The code includes input validation to ensure the row and column inputs are within the valid range (0, 1, 2). It also checks whether a cell is already occupied before allowing a player to place their mark. This prevents common input-related errors and ensures that the game functions as expected and is secure against invalid input.
+
