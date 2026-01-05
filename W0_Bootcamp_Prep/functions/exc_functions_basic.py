@@ -57,6 +57,7 @@ print(check_sign(1589))
 print(check_sign(-0.57))
 print(check_sign(0))
 
+
 #Exercise 7 : Repeat a Word
 #Write a function repeat_word that takes a word and a number as parameters and prints the word that many times.
 def repeat_word(word, times):
