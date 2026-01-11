@@ -69,6 +69,13 @@ print("final state: " , basket)   #[]
 numbers = [i / 2 for i in range(3, 11)]
 print(numbers)
 
+#otra forma (para mi, menos prolija)
+result = []
+for i in range(1,6):
+    result.append(i)
+    result.append(i+0.5)
+print(result[1:-1])
+
 #Exercise 5: For Loop
 #Write a for loop to print all numbers from 1 to 20, inclusive.
 for i in range (1, 21):
@@ -81,6 +88,7 @@ print(my_list)
 for index, value in enumerate(my_list):     #enumerate: index and value at the same time
     if index % 2 == 0:
        print(index, value)
+
 
 #Exercise 6: While Loop
 #Use an input to ask the user to enter their name.
@@ -152,6 +160,27 @@ print(f"Total cost: ${total_price:.2f}")
     # : → From here on, format
     # .2 → 2 decimal places
     # f → float ( decimal number)
+
+
+# --- MANERA ALTERNATIVA
+toppings = []    # List to keep toppings
+price = 10
+
+while True:
+    topping = input("Enter a pizza topping (type 'q' to finish): ").lower()
+    
+    if topping == 'q':
+        if toppings:  #implies that toppings is NOT empty
+            print(f'Your toppings are {', '.join(toppings)} and the price is ${price:.2f}')
+            break  #the person choose some toppings and decide to go out
+        else:
+            print(f'You didn\'t choose any topping, the price is ${price:.2f}')
+            break    #the person decided NOT to choose any topping
+    else:
+        toppings.append(topping)
+        price += 2.5
+        print(f"Adding {topping} to your pizza.") #toppings are still being chosen
+
 
 
 #Exercise 9: Cinemax Tickets  (Hard excercise for me)

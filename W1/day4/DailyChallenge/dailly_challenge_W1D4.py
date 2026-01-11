@@ -48,3 +48,12 @@ for letter in word_user:
         limpio += letter
         check = letter
 print (limpio)
+
+#3° forma
+input_user = input("Enter a word3: ") 
+result = input_user[0]  #me quedo con la 1° letra
+
+for char in input_user[1:]:
+    if char != result[-1]:
+        result += char
+print(result)
