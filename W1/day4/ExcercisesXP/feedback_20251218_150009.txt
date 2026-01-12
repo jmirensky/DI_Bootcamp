@@ -1,0 +1,10 @@
+URL: https://github.com/jmirensky/DI_Bootcamp/blob/main/W1/day4/ExcercisesXP/exercisesXP_W1D4.py
+suggestions for improvement:
+- In Exercise 9 Bonus, clarify the prompt if it should remove people under 16 or outside the 16-21 range. Add an option to enter name.
+- There could be more comments to explain complex code blocks and the goal of the problem.
+Brief justification:
+- correctness: The code accurately implements all exercises described in the chapter content, including set operations, tuple immutability, list manipulation, float generation, for and while loops, input/output handling, and conditional logic. All instructions were executed correctly.
+- readability: The code is well-structured and easy to follow. The comments are helpful and explain the purpose of each exercise and step. Variable names are descriptive, enhancing readability. However, more comments inside complex code blocks would be appreciated.
+- performance: The code is efficient and uses appropriate data structures and algorithms for each task. There are no unnecessary loops or operations that would significantly impact performance.
+- security: The code uses input() to get user data. The input is validated in Exercise 6 to ensure the name is not digits, improving security and preventing errors. The code is not exposed to significant security vulnerabilities.
+

@@ -1,0 +1,10 @@
+URL: https://github.com/jmirensky/DI_Bootcamp/blob/main/W2/day2/ExcercisesXP/exercisesXP_W2D2.py
+suggestions for improvement:
+- Consider adding comments to explain complex logic within the `make_great` function, particularly the loop and string manipulation.
+- For Exercise 7, you implemented the season bonus, which is great! Consider adding a try-except block to the month input to handle non-integer inputs.
+Brief justification:
+- correctness: The code accurately addresses all the exercises as described in the chapter content, including the bonus tasks for Exercise 7. All functions perform their intended purposes and produce the expected output. Each exercise fulfills the specified goals, step-by-step, demonstrating a clear understanding of functions, parameters, random numbers, conditional statements, lists, and string manipulation.
+- readability: The code is well-structured and easy to understand. Function names and variable names are descriptive. The code is consistently formatted, enhancing readability. Each exercise is separated by comments and empty lines.
+- performance: The code exhibits good performance. The functions are efficient and do not contain any unnecessary computations. The use of `random.randint` and `random.uniform` is appropriate for generating random numbers. String formatting with f-strings is performant.
+- security: The code does not involve any user input or external data, so there are no security concerns. It's safe from injection attacks and other vulnerabilities.
+
