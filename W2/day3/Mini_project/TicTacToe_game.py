@@ -12,11 +12,12 @@ board = [
 ]
 
 #Step 2: Displaying the Game Board = with nice format
-def display_board(board):    
-    for i, row in enumerate(board):     #Each row of the board = a list
-        print(" | ".join(row))          #join joins the 3 elements of each row (3 empty spaces) with the string | in the middle.
-        if i < 2:                       # Add a dividing line between rows i=0 i= 1, but not after the last one
-            print("-" * 9)              #to visually separate the rows of the board
+def display_board(board): 
+    print(f'* {board[0][0]} | {board[0][1]} | {board[0][2]} *' )
+    print("-" * 13)
+    print(f'* {board[1][0]} | {board[1][1]} | {board[1][2]} *' )
+    print("-" * 13)
+    print(f'* {board[2][0]} | {board[1][2]} | {board[2][2]} * \n')
 
 
 #Step 3: Getting Player Input
