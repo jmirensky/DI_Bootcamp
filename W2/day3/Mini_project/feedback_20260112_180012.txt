@@ -1,0 +1,10 @@
+URL: https://github.com/jmirensky/DI_Bootcamp/blob/main/W2/day3/Mini_project/TicTacToe_game.py
+suggestions for improvement:
+- Consider adding input validation to prevent non-integer inputs or inputs outside the valid range (0-2) for row and column.
+- You could enhance the display_board function to make the board visually more appealing.
+Brief justification:
+- correctness: The code accurately implements the Tic Tac Toe game as described in the problem statement. It includes all the required functionalities: displaying the board, handling player input, checking for a win, checking for a tie, and managing the game flow.
+- readability: The code is well-structured and easy to follow, with clear function definitions and comments explaining each step of the game logic. The use of meaningful variable names enhances readability.
+- performance: The code has good performance. The game logic is straightforward and efficient for the Tic Tac Toe problem.
+- security: The code doesn't involve any external input or operations that could pose a security risk. The input validation in player_input adds a layer of security.
+
