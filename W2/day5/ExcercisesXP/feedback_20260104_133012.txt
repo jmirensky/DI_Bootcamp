@@ -1,0 +1,10 @@
+URL: https://github.com/jmirensky/DI_Bootcamp/blob/main/W2/day5/ExcercisesXP/excercisesXP_W2D5.py
+suggestions for improvement:
+- In `Zoo.sort_animals()`, it's better to `return grouped` instead of `print(grouped)`, giving more flexibility to the caller.
+- It's good practice to keep class names singular (e.g., `Cat` instead of `Cats`, `Dog` instead of `Dogs`).
+Brief justification:
+- correctness: The code accurately implements all the exercises as described in the chapter content, including creating classes, instantiating objects, defining methods, and using attributes. The bonus exercise is also correctly implemented. The output matches the expected behavior.
+- readability: The code is generally well-structured and easy to follow.  Clear comments explain each step. Using more descriptive variable names could slightly improve readability.
+- performance: The code's performance is efficient for the given tasks.  The algorithms used are appropriate for the scale of the problems.
+- security: There are no apparent security concerns in this code. The code does not handle any external input or perform any operations that could be vulnerable to security threats.
+

@@ -1,0 +1,10 @@
+URL: https://github.com/jmirensky/DI_Bootcamp/blob/main/W1/day5/ExcercisesXP/exercisesXP_W1D5.py
+suggestions for improvement:
+- Consider adding more comments to explain the logic behind complex operations, although the code is generally well-commented.
+- For Exercise 3, the string concatenation in creating the sentence could be improved using the `.join()` method for better readability and efficiency, especially when dealing with a large number of elements.
+Brief justification:
+- correctness: All exercises are completed accurately and address all requirements outlined in the chapter content. The code demonstrates good understanding of dictionaries, loops, and conditionals. Each exercise is implemented correctly according to the instructions.
+- readability: The code is well-structured and uses descriptive variable names, making it easy to understand. The code includes comments that explain most of the steps.
+- performance: The code is efficient for the given tasks. Using `zip` for creating dictionaries is efficient. List comprehensions and dictionary comprehensions are used effectively.
+- security: The code does not involve external inputs or sensitive operations that could lead to security vulnerabilities. Input sanitization is performed in the bonus part of Exercise 2, ensuring age is an integer.
+
