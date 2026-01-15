@@ -1,0 +1,21 @@
+URL: https://github.com/jmirensky/DI_Bootcamp/blob/main/W3/day2/ExcercisesXP/ExcerciseXP1_W3D2.py
+suggestions for improvement:
+- No specific feedback.
+Correctness: 100%
+-----
+URL: https://github.com/jmirensky/DI_Bootcamp/blob/main/W3/day2/ExcercisesXP/ExcerciseXP2_W3D2.py
+suggestions for improvement:
+- No specific feedback.
+Correctness: 100%
+-----
+URL: https://github.com/jmirensky/DI_Bootcamp/blob/main/W3/day2/ExcercisesXP/ExcerciseXP3_W3D2.py
+suggestions for improvement:
+- No specific feedback.
+Correctness: 100%
+-----
+URL: https://github.com/jmirensky/DI_Bootcamp/blob/main/W3/day2/ExcercisesXP/ExcerciseXP4_W3D2.py
+suggestions for improvement:
+- In the `check_majority` function, you should print the exact messages as defined in the instructions (including the names John and Jane).
+- Add docstrings to your methods to explain their function.
+Correctness: 80%
+-----

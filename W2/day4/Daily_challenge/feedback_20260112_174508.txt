@@ -1,0 +1,10 @@
+URL: https://github.com/jmirensky/DI_Bootcamp/blob/main/W2/day4/Daily_challenge/Daily_challenge_W2D4.py
+suggestions for improvement:
+- The first challenge could use list comprehension for a more concise solution, as suggested in the original problem (though not explicitly required in the revised version).
+- Consider adding more robust input validation to handle edge cases such as empty input or inputs with unexpected characters. It could prevent errors and improve the program's robustness.
+Brief justification:
+- correctness: Both challenges are correctly implemented, adhering to the instructions and producing the expected outputs as specified in the Chapter Content/Questions. The sorting challenge sorts comma-separated words, and the longest word challenge identifies the longest word in a sentence.
+- readability: The code is well-structured and uses meaningful variable names, enhancing readability. The comments also help in understanding the code's logic.
+- performance: The code uses efficient methods for string manipulation and sorting, resulting in good performance for the given tasks. Splitting strings and sorting lists are generally optimized operations in Python.
+- security: The code does not involve any external data sources or complex operations that could introduce security vulnerabilities. Input sanitization is not explicitly required but could be considered for production environments.
+
