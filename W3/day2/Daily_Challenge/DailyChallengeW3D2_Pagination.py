@@ -4,7 +4,7 @@
 import math
 
 class Pagination:
-    """A simple pagination system for a list of items, page by page"""
+    """A simple pagination system for a list of items, page by page""" 
 
     def __init__(self, items=None, page_size=10):
         """Initialize pagination with items and page size."""
