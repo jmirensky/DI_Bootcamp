@@ -1,0 +1,111 @@
+W5 D3 15Ene '26   Conceptos de base de datos #1
+
+función agregada = función que opera a lo largo de las filas de una consulta a la vez, devolviendo un único resultado.
+como un resumen, un indicador.
+    count(expression) el número de valores, para los cuales no es expressionNULL
+    sum(expression)	suma de los valores de las filas
+    avg(expression)	la media de los valores 
+    max(expression)	 valor máximo de las filas 
+    min(expression)	valor mínimo de las filas
+    stddev(expression)	desviación estándar de los valores de las filas
+    variance(expression)	varianza de los valores de las filas 
+
+para redondear a dos cifras: ROUND(num, 2)
+
+Alias = se utilizan para dar un nombre temporal (nickname):
+
+-- a una columna
+SELECT column_name AS alias_name
+FROM table_name;
+
+-- a una tabla
+SELECT column_name(s)
+FROM table_name AS alias_name;
+
+
+Palabra clave DISTINCT
+se usa en las expresiones agregadas
+para desduplicar un resultado
+solo las filas agrupadas con valores únicos seran evaluadas por la función. 
+SELECT
+   DISTINCT column_1
+FROM
+   table_name;
+
+operador IN/NOT IN = para comprobar si un valor coincide con algún valor en una lista de valores.
+value IN (value1,value2,...)
+
+operadores BETWEEN AND = para comparar un valor con un rango de valores. 
+value BETWEEN low AND high;
+
+GROUP BY cláusula = para hacer tablas cruzadas o pivote tables
+SELECT 
+   column_1, 
+   column_2,
+   aggregate_function(column_3)
+FROM 
+   table_name
+GROUP BY 
+   column_1,
+   column_2;
+
+
+HAVING despues de GROUP BY
+ SELECT
+    column_1,
+    aggregate_function (column_2)
+FROM
+    tbl_name
+GROUP BY
+    column_1
+HAVING
+    condition;
+
+UNIÓN
+combina conjuntos de resultados de dos o más sentencias SELECT en un solo conjunto de resultados.
+SELECT
+    column_1,
+    column_2
+FROM
+    tbl_name_1
+UNION
+SELECT
+    column_1,
+    column_2
+FROM
+    tbl_name_2;
+
+FOREIGN KEY
+es una clave utilizada para unir dos tablas.
+se refiere a la CLAVE PRIMARIA en otra tabla.
+
+La tabla que contiene la clave externa se llama tabla hija, 
+la tabla que contiene la PRIMARY KEY se denomina tabla referenciada o tabla padre.
+Una tabla puede tener múltiples claves foráneas, dependiendo de sus relaciones con otras tablas.
+
+
+INNER JOIN o simple join
+selecciona registros que tienen valores coincidentes en ambas tablas.
+devuelve un conjunto de resultados que contiene filas en la tabla izquierda que coincide con filas de la tabla derecha.
+
+Devuelve los registros donde se cruzan la tabla1 y la tabla2.
+SELECT column_name(s)
+FROM table1
+INNER JOIN table2
+ON table1.column_name = table2.column_name;
+
+LEFT JOIN
+Devuelve un conjunto completo de filas de la tabla izquierda con las filas correspondientes 
+si están disponibles desde la tabla derecha.
+Si no hay coincidencia, el lado derecho tendrá valores nulos.
+
+RIGHT JOIN
+versión invertida de la unión izquierda.
+Produce un conjunto de resultados que contiene todas las filas de la tabla derecha 
+con las filas correspondientes de la tabla izquierda. 
+Si no hay coincidencia, el lado izquierdo tendrá valores nulos
+
+FULL JOIN - OUTER JOIN
+Produce un conjunto de resultados que contiene todas las filas de ambas tablas izquierda y derecha,
+con las filas correspondientes de ambos lados cuando están disponibles.
+Si no hay coincidencia, el lado que falta contiene valores nulos
