@@ -1,0 +1,212 @@
+W5 D1 13Ene '26   Introduction to Databases
+
+Vamos a usar PostgreSQL, es open source.
+Trabajar con el en la local machine es "difficult", x eso usamos pgAdmin
+pgAdmin te permite realizar tareas relacionadas con bases de datos a través de una interfaz gráfica amigable.
+No es la base de datos, es una herramienta.
+
+Database = base de datos
+
+BDD Relacionales = Los datos se relacionana entre, hay una organizacion mediante tablas, campos, registros. Con conexiones.
+
+Se gestionan con un sistema de gestión de bases de datos relacional SGBDR, ej: MySQL, Oracle, MySQLServer,
+ SQLite3 (posible con VS CODE), PostgreSQL (posible con pgAdmin).
+El lenguaje a usar es SQL --> ej: comando tales como insert, search, update, delete
+
+BDD No Relacionales = NoSQL, no requiere un esquema fijo, evita uniones y es fácil de escalar.
+uso en big data (gigantes volumenes de datos, ej Amazon,, Facebbok), for apps logs, para tecnologias no onvencionales.
+mongoDB, cassandra
+
+conceptos
+SGBD
+tablas = es un objeto
+campo = field = encabezados, nombres que identifican a las variables
+record, registro, fila, entidad horizontal
+columna, entidad vertical
+
+null = ausencia de valor, es vacio, es distinto a cero o a string con spaces
+
+reconocer los datatypes
+* numericos  --> serial autoincremental, smallint
+* strings --> varchar, text
+* date - time stamps - fecha/hora
+* booleans
+* monetarios
+
+constrains = restricciones
+not null 
+default
+unique
+primary key (no nulos y únicos) = par aids
+
+
+Se trabajará con pagina supbase
+te logeas con tu github
+le das un nombre a tu organizacion
+ahi se anidaran tus proyectos
+password   Julieta46501948
+asia pacifico
+
+sql editor
+
+
+Creater Databse Hollywood
+click derecho --> create Script
+
+Sintaxis 
+
+crear tablas
+CREATE TABLE table_name (
+ column_name TYPE column_constraint,
+ table_constraint table_constraint
+);
+
+hacer consultas
+select * from  table_name;
+SELECT
+ column_1,
+ column_2,
+ ...
+FROM
+ table_name;
+
+
+insertar registros   
+
+#DE A UNO                       
+INSERT INTO table(column1, column2, …)           
+VALUES (value1, value2, …);
+
+#DE A VARIOS
+INSERT INTO table (column1, column2, …)
+VALUES
+    (value1, value2, …),
+    (value1, value2, …) ,...;
+
+
+clausula where, para filtrar
+
+SELECT select_list
+FROM table_name
+WHERE condition;
+
+operadores de comparación:
+=	Iguales
+>	Mayor que
+<	Menos que
+>=	Mayor o igual
+<=	Menor o igual
+<> o !=	No es igual
+AND	Operador lógico Y
+OR	Operador lógico O
+NOT
+IS null
+IS NOT null
+
+BUSQUEDA COMODIN
+LIKE  Sensible a mayusculas y minsculas
+ILIKE
+
+limit = limito la cantidad a n filas en mi resultado
+SELECT
+    *
+FROM
+    table_name
+LIMIT n;
+
+LIMIT + OFFSET = mostrame n filas saltando la cantidad de offset
+SELECT * FROM actor WHERE age > '1960-01-01' LIMIT 3 OFFSET 2;
+
+Ordenar = order by
+SELECT
+    column_1,
+    column_2
+FROM
+    table_name
+ORDER BY
+    column_1 [ASC | DESC],
+    column_2 [ASC | DESC];
+
+Actualizar, eliminar, alterar
+UPDATE table
+SET column1 = value1,
+    column2 = value2 ,...
+WHERE
+    condition;
+
+toda la tabla (sin where)
+UPDATE table
+SET column1 = value1,
+    column2 = value2 ,...
+
+con clausula de retorno
+UPDATE table
+SET column1 = value1,
+    column2 = value2 ,...
+WHERE
+    condition;
+RETURNING 
+    column1, 
+    column2;
+
+
+ELIMINAR un registro
+DELETE FROM table
+WHERE condition;  -- generalmente se borra x id
+id NO SE reinicia
+
+ELIMINAR un registro con clausula de retorno
+DELETE FROM table
+WHERE condition
+RETURNING variable1, variable2...;
+
+
+
+TRUNCATE TABLE table_name y DELETE FROM table_name se usan para lo mismo, pero hay diferencias:
+
+Para eliminar todas las filas de una tabla,  omitir la cláusula WHERE
+DELETE FROM table;
+--no vuelve a id_pk = 1 (no restablece identidad)
+-- es un comando de lenguaje de manipulación de datos (DML).
+
+TRUNCAR una tabla = deja limpias todas las filas de la tabla. 
+se puede borrar y al volver a insertar valores, elegir si queremos empezar desde 1 o continuar con la numeracion serial
+TRUNCATE TABLE table_name RESTART IDENTITY; --> recupera el almacenamiento de inmediato.  reinicia la columna SERIAL.
+-- es un comando de lenguaje de definición de datos (DDL).
+
+
+
+
+ALTER TABLE --> ALTER TABLE table_name action;
+Para cambiar la estructura de la tabla existente
+
+Añadir una nueva columna
+ALTER TABLE table_name ADD COLUMN new_column_name TYPE;
+
+Eliminar una columna existente
+ALTER TABLE table_name DROP COLUMN column_name;
+
+Renombrar una columna existente
+ALTER TABLE table_name RENAME COLUMN column_name TO new_column_name;
+
+Renombrar una tabla
+ALTER TABLE table_name RENAME TO new_table_name;
+
+Cambia el tipo de dato de una columna
+ALTER TABLE table_name
+ALTER COLUMN column_name1 [SET DATA] TYPE new_data_type;
+ALTER COLUMN column_name2 [SET DATA] TYPE new_data_type;
+
+Para eliminar una tabla existente de la base de datos,
+DROP TABLE IF EXISTS table_name;
+
+Diversas operaciones aritméticas, solo pueden realizarse sobre columnas.
++   suma
+-   resta
+*   multiplicacion
+/   division
+%   modulo (el resto)
+^   elevar a
+|/  raiz cuadrada
+!   factorial
+@   valor absoluto
