@@ -63,5 +63,5 @@ SELECT * FROM customer_review;
 
 -- Delete a film that has a review from the new_film table. What happens to the customer_review table?
 DELETE FROM new_film WHERE id = 1;
-The first review was automatically deleted when the movie it referenced was deleted
-(due to the ON DELETE CASCADE restriction).
+-- The first review was automatically deleted when the movie it referenced was deleted
+-- (due to the ON DELETE CASCADE restriction).

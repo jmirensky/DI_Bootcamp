@@ -16,19 +16,17 @@ WHERE film_id IN (10, 20, 30);
 
 
 -- Which foreign keys (references) are defined for the customer table? 
-table > customer > constraints > address_id is a Foreign Key, it comes from address table (there it is PRIMARY KEY)
-
-
 -- How does this affect the way in which we INSERT into the customer table?
-We cannot insert address_id values into the customer table without first verifying that they already exist in the address table.
+-- table > customer > constraints > address_id is a Foreign Key, it comes from address table (there it is PRIMARY KEY)
+/*We cannot insert address_id values into the customer table without first verifying that they already exist in the address table./*
 
 
 -- We created a new table called customer_review. Drop this table. Is this an easy step, or does it need extra checking?
 DROP TABLE IF EXISTS customer_review;
 
-Just in case, you need to check first:
+/*Just in case, you need to check first:
 -  if the table exists on the schema
--  if other tables depend from it as "child" tables. In this case, there is no dependency because does not have children, and we can delete it easily.
+-  if other tables depend from it as "child" tables. In this case, there is no dependency because does not have children, and we can delete it easily.*/
 
 
 -- Find out how many rentals are still outstanding (ie. have not been returned to the store yet).
