@@ -18,7 +18,7 @@ WHERE film_id IN (10, 20, 30);
 -- Which foreign keys (references) are defined for the customer table? 
 -- How does this affect the way in which we INSERT into the customer table?
 -- table > customer > constraints > address_id is a Foreign Key, it comes from address table (there it is PRIMARY KEY)
-/*We cannot insert address_id values into the customer table without first verifying that they already exist in the address table./*
+/*We cannot insert address_id values into the customer table without first verifying that they already exist in the address table.*/
 
 
 -- We created a new table called customer_review. Drop this table. Is this an easy step, or does it need extra checking?
