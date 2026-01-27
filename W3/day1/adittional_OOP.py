@@ -78,6 +78,7 @@ print(dir(my_sum))
 class Shape:
   sides = 4 #first property
   name = "Square" #second property
+  
   def description(a): #method defined
     return ("A square with 4 sides")
 
@@ -85,3 +86,8 @@ s1 = Shape() #creating an object of Shape
 print( "Name of shape is:",(s1.name))    #Name of shape is: Square
 print ("Number of sides are:",(s1.sides))  #Number of sides are: 4
 print (s1.description())  #A square with 4 sides
+
+'''The class Shape has the following properties: sides  name
+and the following method:  description
+the argument passed to the method is the word 'self', which is a reference to objects that are made based on this class.
+To reference the instance of the class, self will always be the first parameter.'''

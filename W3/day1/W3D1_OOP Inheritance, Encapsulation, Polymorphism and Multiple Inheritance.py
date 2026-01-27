@@ -32,7 +32,7 @@ rabea.greetings()
 # Encapsulation (Encapsulamiento)
 # Es la unión de datos y funciones [atributos y métodos] que los manipulan.
 #Encapsular en un solo objeto para mantenerlo en "una caja" con la que podamos interactuar.
-# Sirve para: evitar errores - mantener el control - acercarnos a la representacion del mundo real
+# Sirve para: acercarnos a la representacion del mundo real
 
 # abstracción = significa ocultar o abstraer información y dar acceso solo a lo necesario.
 # => no es preciso conocer la lógica completa de cómo funciona algo, solo usarla:
@@ -158,8 +158,9 @@ c.grow()
 print(c.diameter)   #2  (1*2)
 
 
-#Overriding Parent Methods 
-# si se repite el mismo método en clase padre y clase hija, "gana" la clase hija, sobrescribe el método de clase padre.
+#Overriding Parent Methods --> relacionado a Polimorfismo
+# si se repite el mismo método con el mismo nombre en clase padre y clase hija,
+#   => "gana" la clase hija, sobrescribe el método de clase padre.
 
 class Animal:
     def __init__(self, type, number_legs, sound):
@@ -433,7 +434,7 @@ c.sell()
 
 
 #II. Polymorphism = muchas formas ante 1 mismo comando u orden
-# 2 clases diferentes, que usan los mismos nombres para sus funciones. Cada una hara algo distinto
+# 2 clases diferentes, que usan los mismos nombres para sus funciones. Cada una hará algo distinto
 # EJ: comando: ¡habla!  --> respuesta: ladrido_perro, maullido_gato, graznido_ave, mugido_vaca
 
 class Parrot():  #loro
@@ -471,20 +472,20 @@ swimming_test(peggy)  # >> Penguin can swim
 # Ojo: es poderosa - también puede ser confusa - se usa con cuidado
 
 # 4 tipos de herencia
-# * herencia single o simple = clase derivada se deriva de una sola clase base MAMA - HIJA  / animal - perro
+# * 1 herencia single o simple = clase derivada se deriva de una sola clase base MAMA - HIJA  / animal - perro
 #     class BaseClass:
 #       Base class body
 #     class DerivedClass(BaseClass):
 #       Derived class body
-# * herencia multiple = la clase derivada se deriva de más de una clase base. MAMA + PAPA = HIJA  / ej Alien
+# * 2 herencia multiple = la clase derivada se deriva de más de una clase base. MAMA + PAPA = HIJA  / ej Alien
 #     class BaseClass1:
 #       Base class1 body
 #     class BaseClass2:
 #       Base class2 body
 #     class DerivedClass(BaseClass1,BaseClass2):
 #       Derived class body
-# * herencia jerarquica = 2 clases derivadas se derivan de una misa clase base  MAMA - [HIJO1, HIJO2] / animal [perro - gato]
-# * herencia multilevel = la clase derivada se deriva de otra clase derivada   ABUELA - MAMA - HIJA
+# * 3 herencia jerarquica = 2 clases derivadas se derivan de una misa clase base  MAMA - [HIJO1, HIJO2] / animal [perro - gato]
+# * 4 herencia multilevel = la clase derivada se deriva de otra clase derivada   ABUELA - MAMA - HIJA (3 o + generaciones)
 #     class BaseClass:
 #       Base Class body
 #     class Derived1(Base):
